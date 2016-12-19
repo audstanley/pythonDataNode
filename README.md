@@ -27,6 +27,10 @@ Launch with:
 node index.js;
 ```
 
+######Now you can navigate to your raspberry pi's local ip address within
+######a browser, and you should see the application running. Example:
+######192.168.1.4:3000
+
 
 Richard Stanley:
   This is my first commit on the project within Atom.
