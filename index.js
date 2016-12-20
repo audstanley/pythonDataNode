@@ -5,7 +5,9 @@ var multer = require('multer'),
 
 
 var app = express();
+app.use('/ftp', express.static(path.join(__dirname, 'uploads')));
 app.use(bodyParser.json());
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -13,6 +15,10 @@ app.set('view engine', 'jade');
 
 app.get('/', function (req, res) {
   res.render('index');
+});
+
+app.get('/ftp', function (req, res) {
+  res.render('ftp');
 });
 
 
