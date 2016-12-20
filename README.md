@@ -8,21 +8,25 @@ cd;
 ```
 
 Then clone the repository & naviagte into the directory:
+
 ```sh
 git clone https://github.com/audstanley/pythonDataNode && cd pythonDataNode;
 ```
 
 Then install NodeJs if you don't have node installed on your pi:
+
 ```sh
 sudo ./installNode;
 ```
 
 Now install the dependencies of the application with npm:
+
 ```sh
 npm install;
 ```
 
 Launch with:
+
 ```sh
 node index.js;
 ```
