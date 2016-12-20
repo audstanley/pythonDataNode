@@ -43,7 +43,7 @@ git commit;
 
 
 
-# 4. git push origin will push the project up to github.  The comments you made will be on github
+# 4. git push will push the project up to github.  The comments you made will be on github
 # and you can see the progress of the project in slack under the #gitlisten channel
-git push origin;
+git push;
 
