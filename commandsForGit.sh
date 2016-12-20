@@ -1,5 +1,5 @@
-#This is just few git commands to have on file for if/when you get stuck.
-#All of these commands, you will run inside the project folder AFTER you've cloned the
+# This is just few git commands to have on file for if/when you get stuck.
+# All of these commands, you will run inside the project folder AFTER you've cloned the
 # project.  This is for the command line (obvioulsly), and will work on every OS platform.
 # You will need to do this manually on your pi in order to get updates, and run/test
 # them.  You CAN write most of your tests on a laptop, push the changes, then pull on to
@@ -7,7 +7,7 @@
 
 
 
-#you only need to do a git clone ONCE to copy the project with all it's stuff inside.
+# you only need to do a git clone ONCE to copy the project with all it's stuff inside
 # the project folder so far.
 git clone https://github.com/audstanley/pythonDataNode;
 
@@ -23,7 +23,7 @@ git pull;
 
 # 2. add the file(s) that you made changes to and WANT to push up to the devolopment branch
 # NEVER git add node_modules/
-#node_modules is a folder that holds all of the modules that node uses.  This does NOT need
+# node_modules is a folder that holds all of the modules that node uses.  This does NOT need
 # to be published on github.
 git add someFileName.txt someOtherFile.txt somethingElse.txt
 
