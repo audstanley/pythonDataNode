@@ -5,12 +5,14 @@ var multer = require('multer'),
 
 
 var app = express();
+
+//middleware
 app.use('/ftp', express.static(path.join(__dirname, 'uploads')));
 app.use(bodyParser.json());
 
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 
 app.get('/', function (req, res) {
@@ -19,6 +21,10 @@ app.get('/', function (req, res) {
 
 app.get('/ftp', function (req, res) {
   res.render('ftp');
+});
+
+app.get('/users/:id', function (req, res) {
+  res.render('users', { title: "Hey ", message: "Hello there!", uid: req.params.id });
 });
 
 
