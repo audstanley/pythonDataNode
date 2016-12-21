@@ -31,7 +31,7 @@ app.get('/users/:id', function (req, res) {
 app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     console.log(req.body); //form fields
     console.log(req.file); //form files
-    res.render.(__dirname + req.file.path)
+    res.render(__dirname + req.file.path)
     res.status(204).end();
 })
 
