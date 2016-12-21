@@ -6,14 +6,14 @@ html
     p
       h1 Upload something.
     p
-    form(method="post",enctype="multipart/form-data",action="/")
+    //form(method="post",enctype="multipart/form-data",action="/")
       p
         input(type="text",name="title",placeholder="title")
-      p
+    p
+      input(type="file",name="upl")
+      //p
         input(type="file",name="upl")
-      p
+      //p
         input(type="file",name="upl")
-      p
-        input(type="file",name="upl")
-      p
+      //p
         input(type="submit")
