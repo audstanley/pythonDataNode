@@ -37,7 +37,7 @@ app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     var extension = req.file.originalname.match(regexFileExtension)[0]
     console.log("The extension is: " + extension)
     fs.rename(req.file.path, req.file.path + extension)
-    res.redirect(req.file.path + extension)
+    res.redirect(req.file.path + "." + extension)
     res.status(204).end();
 })
 
