@@ -32,8 +32,13 @@ app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     var regexFileExtension = /(\w+)$/;
     console.log(req.body); //form fields
     console.log(req.file); //form files
-    var extension =  req.originalname.match(regexFileExtension);
-    console.log("The extension is: " + extension[0])
+    console.log(req.originalname); //form files
+
+    function readRegex(r) {
+      return req.originalname.match(r)
+    }.then(function (res) { return res })
+    //var extension =  req.originalname.match(regexFileExtension);
+    console.log("The extension is: " + readRegex(regexFileExtension))
     //fs.rename(req.file.path, req.file.path + extension[0], callback)
     //res.redirect(req.file.path + extension[0])
     res.status(204).end();
