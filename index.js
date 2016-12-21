@@ -3,7 +3,6 @@ var multer = require('multer'),
     bodyParser = require('body-parser'),
     path = require('path');
 
-
 var app = express();
 
 //middleware
