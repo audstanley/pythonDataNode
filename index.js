@@ -1,7 +1,8 @@
 var express = require('express');
 var multer = require('multer'),
     bodyParser = require('body-parser'),
-    path = require('path');
+    path = require('path'),
+    fs = require('fs');
 
 var app = express();
 
