@@ -36,7 +36,7 @@ app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     console.log(req.file.originalname); //form files
     var extension = req.file.originalname.match(regexFileExtension)[0].toLowerCase()
     console.log("The extension is: " + extension)
-    fs.rename(req.file.path, req.file.path + "." + extension)
+    fs.rename(req.file.path, req.file.path + "." + extension, err)
     res.redirect(req.file.path + "." + extension)
     res.status(204).end();
 })
