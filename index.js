@@ -29,8 +29,11 @@ app.get('/users/:id', function (req, res) {
 
 
 app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
+    var regexFileExtension = /(\w+)$/;
     console.log(req.body); //form fields
     console.log(req.file); //form files
+    var extension =  req.originalname.match(regexFileExtension);
+    fs.rename(req.file.path, req.file.path + extension, callback)
     res.redirect(req.file.path)
     res.status(204).end();
 })
