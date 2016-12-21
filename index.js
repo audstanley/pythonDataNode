@@ -31,11 +31,11 @@ app.get('/users/:id', function (req, res) {
 
 app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     var regexFileExtension = /(\w+)$/;
-    console.log(req.body); //form fields
-    console.log(req.file); //form files
-    console.log(req.file.originalname); //form files
+    //console.log(req.body); //form fields
+    //console.log(req.file); //form files
+    //console.log(req.file.originalname); //form files
     var extension = req.file.originalname.match(regexFileExtension)[0].toLowerCase()
-    console.log("The extension is: " + extension)
+    //console.log("The extension is: " + extension)
     fs.rename(req.file.path, req.file.path + "." + extension, function(err) {
       if(err) throw err
       else console.log('File upload successful: ' + req.file.originalname + '\n    To: ' + req.file.filename + "." + extension)
