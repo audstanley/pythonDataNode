@@ -1,7 +1,8 @@
 doctype html
 html(lang='en')
   head
-    title Jade
+    title Pug
+    link(rel='stylesheet', type='text/css', href='/public/stylesheet/mystyle.css')
     script(type='text/javascript').
       foo = true;
       bar = function () {};
@@ -13,7 +14,7 @@ html(lang='en')
     #container.col
       p This is a static folder
       p
-        | This is a folder location 
+        | This is a folder location
         | That can serve up static files
-        | and can be accessed with the 
+        | and can be accessed with the
         | direct file path.
