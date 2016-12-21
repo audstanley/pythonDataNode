@@ -32,7 +32,7 @@ app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     var regexFileExtension = /(\w+)$/;
     console.log(req.body); //form fields
     console.log(req.file); //form files
-    console.log(req.originalname); //form files
+    console.log(req.file.originalname); //form files
 
     req.originalname.match(r).then(console.log)
     //var extension =  req.originalname.match(regexFileExtension);
