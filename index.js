@@ -21,10 +21,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/uploads', function (req, res) {
-  res.render('uploads', { fileList: fs.readdir(__dirname + '/uploads', function(err, items){
+  var listOfFiles = fs.readdir(__dirname + '/uploads', function(err, items){
     console.log(__dirname + '/uploads')
     console.log(items)
-  }), something: "Something!!"});
+  })
+  res.render('uploads', { something: "Something!", fileList: listOfFiles});
 });
 
 app.get('/users/:id', function (req, res) {
