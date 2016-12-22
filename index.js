@@ -34,11 +34,11 @@ app.get('/users/:id', function (req, res) {
 
 
 app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
-    var regexFileExtension = /(\w+)$/;
+    var regexFileExtension = /\.[0-9a-z]{1,5}$/;
     //console.log(req.body); //form fields
     //console.log(req.file); //form files
     //console.log(req.file.originalname); //form files
-    var extension = req.file.originalname.match(regexFileExtension)[0].toLowerCase()
+    var extension = req.file.originalname.toLowerCase().match(regexFileExtension)[0]
     //console.log("The extension is: " + extension)
     fs.rename(req.file.path, req.file.path + "." + extension, function(err) {
       if(err) throw err
