@@ -18,12 +18,13 @@ app.set('view engine', 'pug');
 
 app.get('/', function (req, res) {
   res.render('index');
+  console.log("Main Page Viewed.")
 });
 
 app.get('/uploads', function (req, res) {
   fs.readdir(__dirname + '/uploads', function(err, items){
     res.render('uploads', {fileList: items.reverse()});
-    console.log(items)
+    console.log("Uploads Viewed.")
   })
 });
 
