@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/uploads', function (req, res) {
-var uploadsPath = __dirname + '/uploads'
+var uploadsPath = __dirname + '/uploads/'
 var files = fs.readdirSync(uploadsPath)
 files.sort(function(a, b) {
                return fs.statSync(uploadsPath + a).mtime.getTime() -
