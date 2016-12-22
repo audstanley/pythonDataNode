@@ -5,10 +5,9 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='/public/stylesheet/mystyle.css')
   body
     h1 Uploads List:
-    #container.col
       p Here are all the files that have been posted:
       h4
-        mixen ref(thing)
+        mixin ref(thing)
           a(href='/uploads/' + thing) thing
         each item in fileList.length ? fileList : ['No files have been uploaded.']
           li= +ref(item)
