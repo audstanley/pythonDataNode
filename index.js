@@ -24,7 +24,7 @@ app.get('/uploads', function (req, res) {
   fs.readdir(__dirname + '/uploads', function(err, items){
     console.log(__dirname + '/uploads')
     console.log(items)
-    res.render('uploads', { something: "Something!", fileList: items});
+    res.render('uploads', {fileList: items});
   })
 });
 
