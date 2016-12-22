@@ -3,16 +3,10 @@ html(lang='en')
   head
     title Upload List
     link(rel='stylesheet', type='text/css', href='/public/stylesheet/mystyle.css')
-    script(type='text/javascript').
-      foo = true;
-      bar = function () {};
-      if (foo) {
-      bar(1 + 5)
-      }
   body
     h1 Uploads List:
     #container.col
       p Here are all the files that have been posted:
       h4
-        each item in fileList
+        each item in fileList.length ? fileList : ['No files have been uploaded.']
           li= item
