@@ -22,10 +22,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/uploads', function (req, res) {
-  fs.readdir(__dirname + '/uploads', function(err, items){
-    res.render('uploads', {fileList: items.reverse()});
+
+var files = fs.readdirSync(__dirname + '/uploads')
+files.sort(function(a, b) {
+               return fs.statSync(dir + a).mtime.getTime() -
+                      fs.statSync(dir + b).mtime.getTime();
+});
+    console.log(files)
+    res.render('uploads', {fileList: files.reverse()});
     console.log("Uploads Viewed.")
-  })
 });
 
 app.get('/users/:id', function (req, res) {
