@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/uploads', function (req, res) {
-  res.render('uploads', { list: fs.readdir(__dirname + 'uploads', function(err, items){
+  res.render('uploads', { list: fs.readdir(__dirname + '/uploads', function(err, items){
     console.log(__dirname + 'uploads')
     console.log(items)
   })});
