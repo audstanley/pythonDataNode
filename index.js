@@ -23,10 +23,7 @@ app.get('/', function (req, res) {
 
 app.get('/uploads', function (req, res) {
   fs.readdir(__dirname + '/uploads', function(err, items){
-    res.render('uploads', {fileList: items.sort(function(a, b) {
-      return fs.statSync(items + a).mtime.getTime() -
-              fs.statSync(items + b).mtime.getTime()
-    }).reverse()});
+    res.render('uploads', {fileList: items.reverse()});
     console.log("Uploads Viewed.")
   })
 });
