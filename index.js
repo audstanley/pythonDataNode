@@ -28,8 +28,8 @@ files.sort(function(a, b) {
                return fs.statSync(uploadsPath + a).mtime.getTime() -
                       fs.statSync(uploadsPath + b).mtime.getTime();
 });
-    console.log(files)
     res.render('uploads', {fileList: files.reverse()});
+    console.log(files)
     console.log("Uploads Viewed.")
 });
 
