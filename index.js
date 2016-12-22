@@ -22,8 +22,8 @@ app.get('/', function (req, res) {
 
 app.get('/uploads', function (req, res) {
   fs.readdir(__dirname + '/uploads', function(err, items){
-    console.log(items.reverse())
     res.render('uploads', {fileList: items.reverse()});
+    console.log(items)
   })
 });
 

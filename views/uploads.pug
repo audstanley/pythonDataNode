@@ -8,5 +8,7 @@ html(lang='en')
     #container.col
       p Here are all the files that have been posted:
       h4
+        mixen ref(thing)
+          a(href='/uploads/' + thing) thing
         each item in fileList.length ? fileList : ['No files have been uploaded.']
-          li= item
+          li= +ref(item)
