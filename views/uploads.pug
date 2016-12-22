@@ -8,6 +8,7 @@ html(lang='en')
       p Here are all the files that have been posted:
       h4
         mixin ref(thing)
-          a(href='/uploads/' + thing) thing
+          li
+            a(href='/uploads/' + thing)
         each item in fileList.length ? fileList : ['No files have been uploaded.']
-          +ref(item)
+          +ref(item) item
