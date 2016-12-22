@@ -10,4 +10,4 @@ html(lang='en')
         mixin ref(thing)
           a(href='/uploads/' + thing) thing
         each item in fileList.length ? fileList : ['No files have been uploaded.']
-          li= +ref(item)
+          +ref(item)
