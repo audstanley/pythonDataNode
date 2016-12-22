@@ -48,7 +48,7 @@ app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     fs.rename(req.file.path, req.file.path + extension, function(err) {
       if(err) throw err
       else console.log('File upload successful: ' + req.file.originalname +
-                     '\n                         To: ' + req.file.filename + extension)
+                     '\n                        To: ' + req.file.filename + extension)
     })
     res.redirect(req.file.path + extension)
     res.status(204).end();
