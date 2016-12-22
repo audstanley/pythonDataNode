@@ -22,11 +22,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/uploads', function (req, res) {
-
-var files = fs.readdirSync(__dirname + '/uploads')
+var uploadsPath = __dirname + '/uploads'
+var files = fs.readdirSync(uploadsPath)
 files.sort(function(a, b) {
-               return fs.statSync(dir + a).mtime.getTime() -
-                      fs.statSync(dir + b).mtime.getTime();
+               return fs.statSync(uploadsPath + a).mtime.getTime() -
+                      fs.statSync(uploadsPath + b).mtime.getTime();
 });
     console.log(files)
     res.render('uploads', {fileList: files.reverse()});
