@@ -21,7 +21,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/uploads', function (req, res) {
-  res.render('uploads');
+  res.render('uploads', { list: fs.readdir(__dirname + 'uploads', function(err, items){
+  })});
 });
 
 app.get('/users/:id', function (req, res) {
