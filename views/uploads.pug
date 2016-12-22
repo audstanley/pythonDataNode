@@ -13,4 +13,7 @@ html(lang='en')
     h1 Uploads List:
     #container.col
       p Here are all the files that have been posted:
-      h4= fileList[0]
+      h4
+        each item in fileList
+          li= item
+          li= item
