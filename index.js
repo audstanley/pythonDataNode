@@ -18,6 +18,7 @@ app.set('view engine', 'pug');
 
 app.get('/', function (req, res) {
   var jsonViews = fs.readFileSync(__dirname + '/public/views.json').hits
+  console.log(jsonViews)
   res.render('index', {views: jsonViews});
   console.log("Main Page Viewed.")
 });
