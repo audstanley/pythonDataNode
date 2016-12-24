@@ -17,7 +17,8 @@ app.set('view engine', 'pug');
 
 
 app.get('/', function (req, res) {
-  res.render('index');
+  var jsonViews = fs.readFileSync(__dirname, '/public/views.json')
+  res.render('index', {views: jsonViews});
   console.log("Main Page Viewed.")
 });
 
@@ -42,7 +43,7 @@ app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     var regexFileExtension = /\.[0-9a-z]{1,5}$/;
     //console.log(req.body); //form fields
     //console.log(req.file); //form files
-    //console.log(req.file.originalname); //form files
+    //console.log(req.file.originalname); //form file
     var extension = req.file.originalname.toLowerCase().match(regexFileExtension)[0]
     //console.log("The extension is: " + extension)
     fs.rename(req.file.path, req.file.path + extension, function(err) {
