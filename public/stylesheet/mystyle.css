@@ -159,6 +159,11 @@ h6,
   font-size: .77rem;
 }
 
+h6.right, {
+  font-size: .77rem;
+  right: 20px;
+}
+
 small,
 .retro-small {
   font-size: .66em;
