@@ -19,10 +19,10 @@ app.set('view engine', 'pug');
 app.get('/', function (req, res) {
   var jvPath = __dirname + '/public/views.json'
   var readJViews = JSON.parse(fs.readFileSync(jvPath), {encoding: 'json'}, (err, data) => {
-    var hp = data.hits + 1
+    var hp = 1 + data.hits
     console.log(hp)
   })
-  res.render('index', {views: readJViews.hits++});
+  res.render('index', {views: readJViews.hits});
   console.log("Main Page Viewed.")
 });
 
