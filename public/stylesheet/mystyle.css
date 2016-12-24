@@ -96,6 +96,10 @@ a:active {
     border:5px;
 }
 
+.right-no-pad {
+    float:right;
+}
+
 .wrap {
     height: auto;
     margin: 0 auto -80px; /* footer height + space */
