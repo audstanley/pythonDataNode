@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
   var readJViews = JSON.parse(fs.readFileSync(jvPath)).hits
   var n = Number.parseInt(readJViews, 10) + 1
   fs.writeFileSync(jvPath, '{ \"hits\": \"' + n + '\" }')
-  console.log(n + " from: " req.ip)
+  console.log(n + " from: " + req.ip)
   res.render('index', {views: n});
   //console.log("Main Page Viewed.")
 });
