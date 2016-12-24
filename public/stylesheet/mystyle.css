@@ -127,6 +127,9 @@ h4,
   font-weight: inherit;
   line-height: 1.42;
 }
+h6.right, {
+  right: 20px;
+}
 
 h1,
 .retro-h1 {
@@ -161,7 +164,6 @@ h6,
 
 h6.right, {
   font-size: .77rem;
-  right: 20px;
 }
 
 small,
