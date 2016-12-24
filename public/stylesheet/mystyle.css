@@ -89,8 +89,7 @@ a:active {
   text-decoration: none;
 }
 
-.to-the-right, {
-    background-color: yellow;
+.to-the-right {
     float:right;
     width:50px;
     height:100px;
