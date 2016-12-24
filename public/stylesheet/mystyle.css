@@ -92,7 +92,7 @@ a:active {
 .to-the-right {
     float:right;
     width:250px;
-    height:5px;
+    height:0px;
     border:5px;
 }
 
