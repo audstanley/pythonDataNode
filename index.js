@@ -18,7 +18,7 @@ app.set('view engine', 'pug');
 
 app.get('/', function (req, res) {
   var jvPath = __dirname + '/public/views.json'
-  var readJViews = jvPath => fs.readFileSync(jvPath).then(JSON.parse).hits
+  var readJViews = jvPath => fs.readFileSync(jvPath).hits
   var hp = 1 + Number.parseInt(readJViews)
   var a = "5"
   var b = 3
