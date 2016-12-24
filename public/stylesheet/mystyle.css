@@ -107,12 +107,10 @@ a:active {
 
 .footer {
   position: fixed;
-  width: 100%;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: .5rem;
-  padding-top: 400px(opacity=50);
+  padding: .6rem;
   background-color: #434647;
   text-align: right;
 }
