@@ -102,7 +102,7 @@ a:active {
   bottom: 0;
   left: 0;
   padding: .5rem;
-  padding-top: 3rem;
+  padding-top: 3rem(opacity=50);
   background-color: #434647;
   text-align: right;
 }
