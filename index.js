@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
   fs.writeFileSync(jvPath, '{ \"hits\": \"' + n + '\" }')
   console.log(n)
   res.render('index', {views: n});
-  console.log("Main Page Viewed.")
+  //console.log("Main Page Viewed.")
 });
 
 app.get('/uploads', function (req, res) {
