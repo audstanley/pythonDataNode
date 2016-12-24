@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
   var n = Number.parseInt(readJViews, 10) + 1
   fs.writeFileSync(jvPath, '{ \"hits\": \"' + n + '\" }')
   console.log(n + " from: " + req.ip)
-  res.render('index', {views: n});
+  res.render('index', {views: n.toLocaleString()});
   //console.log("Main Page Viewed.")
 });
 
