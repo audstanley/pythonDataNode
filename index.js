@@ -1,9 +1,9 @@
 var express = require('express');
+var logger = require('express-logger');
 var multer = require('multer'),
     bodyParser = require('body-parser'),
     path = require('path'),
-    fs = require('fs'),
-    logger = require('express-logger');
+    fs = require('fs');
 
 var app = express();
 
