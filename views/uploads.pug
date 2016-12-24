@@ -6,7 +6,7 @@ html(lang='en')
   body
     h1 Uploads List:
       p Here are all the files that have been posted:
-      h4
+      h5
         mixin ref(href, name)
           li
             a(href='/uploads/' + href)= name
@@ -15,3 +15,5 @@ html(lang='en')
           +ref(item, item)
       h6
         a(href='/') main
+      p
+        include footer.pug
