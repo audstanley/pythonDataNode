@@ -3,23 +3,24 @@ html
     title Stanley's Uploads
     link(rel='stylesheet', type='text/css', href='/public/stylesheet/mystyle.css')
   body
-    p
-      h1 Upload something.
-    p
-    p
-      h5 upload size max: 20Mb
-    form(method="post",enctype="multipart/form-data",action="/")
-      //p
-        input(type="text",name="title",placeholder="title")
+    div(class='wrap')
       p
-        input(type="file",name="upl")
+        h1 Upload something.
       p
-        input(type="submit")
       p
-        h6
-          a(href='/uploads/') Uploaded
+        h5 upload size max: 20Mb
+      form(method="post",enctype="multipart/form-data",action="/")
+        //p
+          input(type="text",name="title",placeholder="title")
+        p
+          input(type="file",name="upl")
+        p
+          input(type="submit")
+        p
+          h6
+            a(href='/uploads/') Uploaded
+        p
+          h6
+            div(class='to-the-right') #{views} people want to upload shit.
       p
-        h6
-          div(class='to-the-right') #{views} people want to upload shit.
-    p
-      include footer.pug
+        include footer.pug

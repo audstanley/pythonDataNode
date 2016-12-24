@@ -96,8 +96,18 @@ a:active {
     border:5px;
 }
 
+.wrap {
+    height: auto;
+    margin: 0 auto -80px; /* footer height + space */
+    min-height: 100%;
+    padding: 0 0 80px; /* footer height + space */
+    box-sizing: border-box;
+    overflow: auto;
+}
+
 .footer {
   position: relative;
+  width: 100%;
   right: 0;
   bottom: 0;
   left: 0;

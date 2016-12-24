@@ -4,16 +4,17 @@ html(lang='en')
     title Upload List
     link(rel='stylesheet', type='text/css', href='/public/stylesheet/mystyle.css')
   body
-    h1 Uploads List:
-      p Here are all the files that have been posted:
-      h5
-        mixin ref(href, name)
-          li
-            a(href='/uploads/' + href)= name
-            thing
-        each item in fileList.length ? fileList : ['No files have been uploaded.']
-          +ref(item, item)
-      h6
-        a(href='/') main
-      p
-        include footer.pug
+    div(class='wrap')
+      h1 Uploads List:
+        p Here are all the files that have been posted:
+        h5
+          mixin ref(href, name)
+            li
+              a(href='/uploads/' + href)= name
+              thing
+          each item in fileList.length ? fileList : ['No files have been uploaded.']
+            +ref(item, item)
+        h6
+          a(href='/') main
+        p
+          include footer.pug
