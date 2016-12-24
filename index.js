@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
   var jvPath = __dirname + '/public/views.json'
   var readJViews = JSON.parse(fs.readFileSync(jvPath)).hits
   var n = Number.parseInt(readJViews, 8) + 1
-  fs.writeSync(jvPath, '{ \"hits\": \"' + n + '\" }')
+  fs.writeFileSync(jvPath, '{ \"hits\": \"' + n + '\" }')
   console.log(n)
   res.render('index', {views: n});
   console.log("Main Page Viewed.")
