@@ -3,7 +3,7 @@ var multer = require('multer'),
     bodyParser = require('body-parser'),
     path = require('path'),
     fs = require('fs'),
-    logger = requier('express-logger');
+    logger = require('express-logger');
 
 var app = express();
 
