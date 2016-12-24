@@ -98,6 +98,9 @@ a:active {
 
 .right-no-pad {
     float:right;
+    border:0px;
+    height:128px;
+    width:128px;
 }
 
 .wrap {
