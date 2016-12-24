@@ -89,6 +89,14 @@ a:active {
   text-decoration: none;
 }
 
+.to-the-right, {
+    background-color: yellow;
+    float:right;
+    width:50px;
+    height:100px;
+    border:5px;
+}
+
 html {
   font-size: 12px;
 }
@@ -168,13 +176,6 @@ small,
   font-size: .66em;
 }
 
-.right, {
-    background-color: yellow;
-    float:right;
-    width:50px;
-    height:100px;
-    border:5px;
-}
 
 /* https://github.com/mrmrs/fluidity */
 
