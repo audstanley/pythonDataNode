@@ -98,7 +98,7 @@ a:active {
 
 .right-no-pad {
     float:right;
-    padding: 0px;
+    padding-right: 2rem;
     border:0px;
 }
 
