@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
   var n = Number.parseInt(readJViews, 10) + 1
   console.log(n)
   res.render('index', {views: n});
-  console.log("Main Page Viewed.")
+  //console.log("Main Page Viewed.")
 });
 
 app.get('/uploads', function (req, res) {
