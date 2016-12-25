@@ -96,6 +96,13 @@ a:active {
     border:5px;
 }
 
+.to-the-right-dance {
+    float:right;
+    width:250;
+    height:0px;
+    border:5px;
+}
+
 .to-the-right-n-vert-center {
     float:right;
     padding-right: 4.5rem;
