@@ -1,5 +1,5 @@
 var express = require('express');
-var main = require('./routes/index');
+var main = require('/routes/index');
 
 var router = express.Router();
 
