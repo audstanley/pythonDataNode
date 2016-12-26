@@ -5,6 +5,6 @@ let appRoot = process.env.PWD
 
 module.exports = {
   getUser: function (req, res) {
-    res.render('/', { title: "Hey ", message: "Hello there!", uid: req.params.id })
+    res.render('users', { title: "Hey ", message: "Hello there!", uid: req.params.id })
   }
 }
