@@ -14,7 +14,7 @@ module.exports = {
     res.render('index', {views: n.toLocaleString()});
   }
 
-  postIndex(multer({ dest: appRoot + '/uploads/'}).single('upl'), function(req, res) {
+  postIndex = multer({ dest: appRoot + '/uploads/'}).single('upl'), function(req, res) {
       let regexFileExtension = /\.[0-9a-z]{1,5}$/;
       let extension = req.file.originalname.toLowerCase().match(regexFileExtension)[0]
       fs.rename(req.file.path, req.file.path + extension, function(err) {
@@ -24,6 +24,6 @@ module.exports = {
       })
       res.redirect(appRoot + '/uploads')
       res.status(204).end();
-  })
+  }
 
 }
