@@ -1,7 +1,4 @@
 module.exports = {
-  //let router = express.Router();
-
-console.log('Got to our index.js')
 
   getIndex: function (req, res) {
     let multer = require('multer')
