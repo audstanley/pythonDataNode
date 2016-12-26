@@ -11,7 +11,7 @@ module.exports = {
     fs.writeFileSync(jvPath, '{ \"hits\": \"' + n + '\" }')
     console.log(n + " from: " + req.ip)
     res.render('index', {views: n.toLocaleString()});
-  };
+  }
 
   // postIndex(multer({ dest: '../uploads/'}).single('upl'), function(req, res) {
   //     let regexFileExtension = /\.[0-9a-z]{1,5}$/;
