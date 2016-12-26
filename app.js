@@ -1,5 +1,5 @@
 var express = require('express');
-var routes = require('./routes');
+var routes = require('/routes');
 var multer = require('multer'),
     bodyParser = require('body-parser'),
     path = require('path'),
