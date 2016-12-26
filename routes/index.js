@@ -1,5 +1,5 @@
 module.exports = {
-  var multer = require('multer')
+  var multer = require('./multer')
   let bodyParser = require('body-parser')
   let path = require('path')
   let fs = require('fs')
