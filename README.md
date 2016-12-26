@@ -28,7 +28,7 @@ npm install;
 Launch with:
 
 ```sh
-node index.js;
+node app.js;
 ```
 
 ######Now you can navigate to your raspberry pi's local ip address within a browser, and you should see the application running. Example:
