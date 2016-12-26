@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.get('/', function(req, res)) {
-  res.res('Hello world')
+  res.render('index');
 }
 
 //routes:
