@@ -16,9 +16,9 @@ app.set('view engine', 'pug');
 
 
 app.get('/', function (req, res) {
-  var jvPath = __dirname + '/public/views.json'
-  var readJViews = JSON.parse(fs.readFileSync(jvPath)).hits
-  var n = Number.parseInt(readJViews, 10) + 1
+  let jvPath = __dirname + '/public/views.json'
+  let readJViews = JSON.parse(fs.readFileSync(jvPath)).hits
+  let n = Number.parseInt(readJViews, 10) + 1
   fs.writeFileSync(jvPath, '{ \"hits\": \"' + n + '\" }')
   console.log(n + " from: " + req.ip)
   res.render('index', {views: n.toLocaleString()});
@@ -26,8 +26,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/uploads', function (req, res) {
-var uploadsPath = __dirname + '/uploads/'
-var files = fs.readdirSync(uploadsPath)
+let uploadsPath = __dirname + '/uploads/'
+let files = fs.readdirSync(uploadsPath)
 files.sort(function(a, b) {
                return fs.statSync(uploadsPath + a).mtime.getTime() -
                       fs.statSync(uploadsPath + b).mtime.getTime();
@@ -43,7 +43,7 @@ app.get('/users/:id', function (req, res) {
 
 
 app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
-    var regexFileExtension = /\.[0-9a-z]{1,5}$/;
+    let regexFileExtension = /\.[0-9a-z]{1,5}$/;
     //console.log(req.body); //form fields
     //console.log(req.file); //form files
     //console.log(req.file.originalname); //form file
