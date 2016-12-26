@@ -12,7 +12,7 @@ module.exports = {
     fs.writeFileSync(jvPath, '{ \"hits\": \"' + n + '\" }')
     console.log(n + " from: " + req.ip)
     res.render('index', {views: n.toLocaleString()});
-  }
+  },
 
   postIndex: function(req, res) {
     console.log(res)
