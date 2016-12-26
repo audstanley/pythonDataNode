@@ -5,7 +5,7 @@ var multer = require('multer'),
     fs = require('fs');
 
 const app = express();
-let routes = require('./routes/index.js')(app);
+var routes = require('./routes/index.js')(app);
 //middleware
 //app.use('/', require(__dirname, 'routes/index.js'));
 app.use('/uploads/', express.static(path.join(__dirname, 'uploads')));
