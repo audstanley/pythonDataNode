@@ -5,7 +5,7 @@ module.exports = {
     let bodyParser = require('body-parser')
     let path = require('path')
     let fs = require('fs')
-    let jvPath = __dirname + '/public/views.json'
+    let jvPath = __dirname + '../public/views.json'
     let readJViews = JSON.parse(fs.readFileSync(jvPath)).hits
     let n = Number.parseInt(readJViews, 10) + 1
     fs.writeFileSync(jvPath, '{ \"hits\": \"' + n + '\" }')
