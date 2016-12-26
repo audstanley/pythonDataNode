@@ -8,7 +8,7 @@ var multer = require('multer'),
 const app = express();
 
 //middleware
-app.use('/', routes);
+app.use('/api', routes);
 app.use('/uploads/', express.static(path.join(__dirname, 'uploads')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
