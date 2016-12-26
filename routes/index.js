@@ -1,10 +1,11 @@
+let multer = require('multer')
+let bodyParser = require('body-parser')
+let path = require('path')
+let fs = require('fs')
+let appRoot = process.env.PWD
+let jvPath = appRoot + '/public/views.json'
+
 module.exports = {
-  let multer = require('multer'),
-  let bodyParser = require('body-parser'),
-  let path = require('path'),
-  let fs = require('fs'),
-  let appRoot = process.env.PWD,
-  let jvPath = appRoot + '/public/views.json',
   getIndex: function (req, res) {
     let readJViews = JSON.parse(fs.readFileSync(jvPath)).hits
     let n = Number.parseInt(readJViews, 10) + 1
