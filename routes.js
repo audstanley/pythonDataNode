@@ -4,6 +4,6 @@ var main = require('./routes/index');
 
 console.log('Got to routes.js')
 router.get('/', main.getIndex);
-//router.route('/', main.postIndex());
+router.post('/', main.postIndex);
 
 module.exports = router;
