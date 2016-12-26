@@ -1,9 +1,9 @@
 var express = require('express');
-var main = require('/routes/index');
-
 var router = express.Router();
+var main = require('./routes/index');
 
-router.route('/up').get(main.getIndex);
-router.route('/up').post(main.postIndex);
+concol.log('Got to routes.js')
+router.get('/', main.getIndex));
+router.route('/', main.postIndex);
 
 module.exports = router;

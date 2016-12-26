@@ -5,6 +5,8 @@ module.exports = {
   let fs = require('fs')
   let router = express.Router();
 
+console.log('Got to our index.js')
+
   getIndex: function (req, res) {
     let jvPath = __dirname + '/public/views.json'
     let readJViews = JSON.parse(fs.readFileSync(jvPath)).hits
