@@ -1,5 +1,4 @@
 var express = require('express');
-var routes = require('/routes');
 var multer = require('multer'),
     bodyParser = require('body-parser'),
     path = require('path'),
@@ -16,19 +15,16 @@ app.use(bodyParser.json());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.get('/', function(req, res)) {
-  res.render('index');
-}
 
 //routes:
-// app.get('/', function (req, res) {
-//   let jvPath = __dirname + '/public/views.json'
-//   let readJViews = JSON.parse(fs.readFileSync(jvPath)).hits
-//   let n = Number.parseInt(readJViews, 10) + 1
-//   fs.writeFileSync(jvPath, '{ \"hits\": \"' + n + '\" }')
-//   console.log(n + " from: " + req.ip)
-//   res.render('index', {views: n.toLocaleString()});
-// });
+app.get('/', function (req, res) {
+  let jvPath = __dirname + '/public/views.json'
+  let readJViews = JSON.parse(fs.readFileSync(jvPath)).hits
+  let n = Number.parseInt(readJViews, 10) + 1
+  fs.writeFileSync(jvPath, '{ \"hits\": \"' + n + '\" }')
+  console.log(n + " from: " + req.ip)
+  res.render('index', {views: n.toLocaleString()});
+});
 
 app.get('/uploads', function (req, res) {
 let uploadsPath = __dirname + '/uploads/'
@@ -45,17 +41,17 @@ app.get('/users/:id', function (req, res) {
   res.render('users', { title: "Hey ", message: "Hello there!", uid: req.params.id });
 });
 
-// app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
-//     let regexFileExtension = /\.[0-9a-z]{1,5}$/;
-//     let extension = req.file.originalname.toLowerCase().match(regexFileExtension)[0]
-//     fs.rename(req.file.path, req.file.path + extension, function(err) {
-//       if(err) throw err
-//       else console.log('File upload successful: ' + req.file.originalname +
-//                      '\n                        To: ' + req.file.filename + extension)
-//     })
-//     res.redirect('/uploads')
-//     res.status(204).end();
-// })
+app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
+    let regexFileExtension = /\.[0-9a-z]{1,5}$/;
+    let extension = req.file.originalname.toLowerCase().match(regexFileExtension)[0]
+    fs.rename(req.file.path, req.file.path + extension, function(err) {
+      if(err) throw err
+      else console.log('File upload successful: ' + req.file.originalname +
+                     '\n                        To: ' + req.file.filename + extension)
+    })
+    res.redirect('/uploads')
+    res.status(204).end();
+})
 
 //Express listen:
 app.listen(3000, function () {
