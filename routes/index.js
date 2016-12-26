@@ -1,12 +1,11 @@
 var express = require('express');
-var router = express.Router();
 var multer = require('multer'),
-    requests = require('requests'),
     bodyParser = require('body-parser'),
     path = require('path'),
     fs = require('fs');
+var router = express.Router();
 
-app.get('/', function (req, res) {
+router.get('/', function (req, res) {
   let jvPath = __dirname + '/public/views.json'
   let readJViews = JSON.parse(fs.readFileSync(jvPath)).hits
   let n = Number.parseInt(readJViews, 10) + 1
@@ -16,7 +15,7 @@ app.get('/', function (req, res) {
   //console.log("Main Page Viewed.")
 });
 
-app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
+router.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     let regexFileExtension = /\.[0-9a-z]{1,5}$/;
     let extension = req.file.originalname.toLowerCase().match(regexFileExtension)[0]
     //console.log("The extension is: " + extension)
@@ -29,4 +28,4 @@ app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     res.status(204).end();
 })
 
-module.exports = router
+module.exports = router;
