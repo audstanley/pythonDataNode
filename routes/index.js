@@ -14,4 +14,7 @@ module.exports = {
     res.render('index', {views: n.toLocaleString()});
   }
 
+  postIndex: function(req, res) {
+    console.log(res)
+  }
 }
