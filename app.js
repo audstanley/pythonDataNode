@@ -3,12 +3,11 @@ let multer = require('multer')
 let bodyParser = require('body-parser')
 let path = require('path')
 let fs = require('fs')
-let routes = require('./routes')
+
 
 const app = express();
 
 //middleware
-app.use('/api', routes);
 app.use('/uploads/', express.static(path.join(__dirname, 'uploads')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
@@ -38,9 +37,9 @@ files.sort(function(a, b) {
     console.log("Uploads Viewed.")
 });
 
-// app.get('/users/:id', function (req, res) {
-//   res.render('users', { title: "Hey ", message: "Hello there!", uid: req.params.id });
-// });
+app.get('/users/:id', function (req, res) {
+  res.render('users', { title: "Hey ", message: "Hello there!", uid: req.params.id });
+});
 
 app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
     let regexFileExtension = /\.[0-9a-z]{1,5}$/;
