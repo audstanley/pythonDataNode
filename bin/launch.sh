@@ -1,2 +1,2 @@
 #!/bin/bash
-cd .. && node app.js;
+node app.js;
