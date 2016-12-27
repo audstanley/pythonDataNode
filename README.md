@@ -4,6 +4,7 @@ An application that is designed to talk to other nodes, share information, files
 ######In order to install on the raspberry pi zero|1|2|3:
 ```sh
 cd;
+mkdir uploads;
 git clone https://github.com/audstanley/pythonDataNode && cd pythonDataNode;
 sudo ./installNode;
 npm install;
