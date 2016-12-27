@@ -1,2 +1,2 @@
 #!/bin/bash
-node app.js;
+cd /home/pi/pythonDataNode/ && node app.js;
