@@ -16,5 +16,4 @@ node app.js;
 #####You can also gracefully shutdown the node application with Ctrl-C, and restart by rerunning node index.js
 
 
-you can also visit my instructables to see more details:
-[link](http://www.instructables.com/id/Raspberry-Pi-File-Uploader/)
+you can also visit my instructables to see more details: [Instructables](http://www.instructables.com/id/Raspberry-Pi-File-Uploader/)
