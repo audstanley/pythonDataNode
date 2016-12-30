@@ -1,5 +1,5 @@
 # pythonDataNode
-An application that is designed to talk to other nodes, share information, files, and can communicate securely.  It is designed for raspbian systems.
+A nodejs file upload web application for the raspberry pi. This includes an installation script to install the latest version of NodeJs on any type of raspberry pi.
 
 ######In order to install on the raspberry pi zero|1|2|3:
 ```sh
