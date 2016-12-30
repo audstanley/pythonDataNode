@@ -55,7 +55,7 @@ app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req, res) {
 })
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('app.js listening on port 3000!');
   console.log('pid is ' + process.pid);
 });
 
