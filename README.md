@@ -4,8 +4,8 @@ A nodejs file upload web application for the raspberry pi. This includes an inst
 ######In order to install on the raspberry pi zero|1|2|3:
 ```sh
 cd;
-mkdir uploads;
 git clone https://github.com/audstanley/pythonDataNode && cd pythonDataNode;
+mkdir uploads;
 sudo ./installNode;
 npm install;
 node app.js;
