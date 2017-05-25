@@ -1,7 +1,7 @@
 # pythonDataNode
 A nodejs file upload web application for the raspberry pi. This includes an installation script to install the latest version of NodeJs on any type of raspberry pi.
 
-######In order to install on the raspberry pi zero|1|2|3:
+###### In order to install on the raspberry pi zero|1|2|3:
 ```sh
 cd;
 git clone https://github.com/audstanley/pythonDataNode && cd pythonDataNode;
